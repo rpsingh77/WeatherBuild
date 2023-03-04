@@ -4,14 +4,13 @@ pipeline
     
     stages
     {
-        //stage('Checkout')
-        //{
-        //    steps
-        //    {
-        //        git branch: """${GIT_BRANCH}""", credentialsId: 'GitPat', url: 'https://github.com/rpsingh77/Weather.git'
-        //    }
-        //    
-        // }
+        stage('Print Branch Name')
+        {
+            steps
+            {
+                echo """Branch name is : ${git_branch}"""
+            }            
+         }
         
         stage('Build')
         {
