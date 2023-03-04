@@ -8,10 +8,9 @@ pipeline
         {
             steps
             {
-                
 				script
 				{
-					echo """${env.BRANCH_NAME}"""
+					echo ${GIT_BRANCH}
 				}
             }
             
