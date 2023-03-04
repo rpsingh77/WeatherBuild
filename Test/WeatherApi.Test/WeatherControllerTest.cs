@@ -48,6 +48,21 @@ namespace WeatherApi.Test
         }
 
         [Test]
+        public void ShouldGetMontrealTemperature()
+        {
+            var city = "Montreal";
+            var result = _controller.GetTemperature(city);
+            Assert.That(result, Is.InstanceOf<OkObjectResult>());
+            var okResult = result as OkObjectResult;
+            Assert.That(okResult, Is.Not.Null);
+            if (okResult != null && okResult.Value is not null)
+            {
+                var temp = (int)okResult.Value;
+                Assert.IsTrue(temp > 0);
+            }
+        }
+
+        [Test]
         public void ShouldNotGettHyderabadTemperature()
         {
             var city = "Hyderabad";
