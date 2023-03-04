@@ -48,7 +48,7 @@ namespace WeatherApi.Test
         }
 
         [Test]
-        public void ShouldGetTemperature()
+        public void ShouldNotGettHyderabadTemperature()
         {
             var city = "Hyderabad";
             Assert.Throws<Exception>(()=> { _controller.GetTemperature(city); });
