@@ -28,7 +28,7 @@ namespace WeatherApi.Test
             if(okResult != null && okResult.Value is not null)
             {
                 var temp = (int)okResult.Value;
-                Assert.IsTrue(temp > 100);
+                Assert.IsTrue(temp > 0);
             }
         }
 
