@@ -8,7 +8,7 @@ pipeline
         {
             steps
             {
-                git branch: 'features/TestCaseImprovement', credentialsId: 'GitPat', url: 'https://github.com/rpsingh77/Weather.git'
+                git branch: """${BRANCH_NAME}""", credentialsId: 'GitPat', url: 'https://github.com/rpsingh77/Weather.git'
             }
             
         }
