@@ -10,7 +10,7 @@ pipeline
             {
 				script
 				{
-					echo ${GIT_BRANCH}
+					echo """${GIT_BRANCH}"""
 				}
             }
             
